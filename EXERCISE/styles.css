@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+
+.container{
+    display: grid;
+    place-content:center;
+    justify-items: center;
+    gap: 20px;
+    border: solid 2px;
+    border-radius: 2vh;
+    width: 60vh;
+    height: auto;
+    background-color: rgb(85, 243, 190);
+    padding: 20px; /* Agrega relleno para mejor apariencia */
+}
+
+button{
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+#agregarTarea{
+    background-color: rgb(61, 250, 225);
+}
+
+#agregarTarea:hover{
+    background-color: black;
+    color: white;
+}
+
+input, #agregarTarea{
+    padding: 5px;
+    border-radius: 1vh;
+}
+
+#lista-tareas{
+    width: 50vh;
+    list-style: none;
+    background: #f4f4f4; 
+    border-radius: 10px;
+}
+
+li {
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.completada {
+    text-decoration: line-through;
+}
