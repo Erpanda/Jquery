@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     // funciond de agregado de lista
     function agregarTarea() {
+        $("h3").text("TAREAS:")
         let tarea = $("#nuevaTarea").val().trim();
         if (tarea !== "") {
             $("#lista-tareas").append(`<li>
@@ -37,6 +38,14 @@ $(document).ready(function() {
 
     $(document).on("click", ".eliminar", function() {
         $(this).parent().remove();
+        if ($("#lista-tareas").children().length === 0) {
+            $("h3").text(""); // Oculta el título si no hay tareas
+        }
     });
-
-})
+    
+    // Esta función debe estar fuera de la función de eliminar
+    $("#m-o").click(function() {
+        $(".completada").toggle();
+    });
+    
+});

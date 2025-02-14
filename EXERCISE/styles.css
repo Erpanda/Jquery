@@ -23,7 +23,7 @@ body {
     width: 60vh;
     height: auto;
     background-color: rgb(85, 243, 190);
-    padding: 20px; /* Agrega relleno para mejor apariencia */
+    padding: 20px;
 }
 
 button{
@@ -31,33 +31,41 @@ button{
     transition: all .3s ease-in-out;
 }
 
-#agregarTarea{
+#agregarTarea, #m-o{
     background-color: rgb(61, 250, 225);
 }
 
-#agregarTarea:hover{
+#agregarTarea:hover,  #m-o:hover{
     background-color: black;
     color: white;
 }
 
-input, #agregarTarea{
+input, #agregarTarea, #m-o{
     padding: 5px;
     border-radius: 1vh;
+}
+
+.lista{
+    display: grid;
+    gap: 10px;
 }
 
 #lista-tareas{
     width: 50vh;
     list-style: none;
-    background: #f4f4f4; 
-    border-radius: 10px;
+    display: grid;
+    gap: 10px;
 }
 
 li {
     padding: 10px; 
     display: flex; 
     justify-content: space-between; 
+    background: #f4f4f4; 
+    border-radius: 10px;
 }
 
 .completada {
     text-decoration: line-through;
+    background-color: rgb(98, 238, 122);
 }

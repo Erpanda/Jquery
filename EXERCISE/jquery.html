@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Lista de tareas</title>
@@ -10,13 +10,18 @@
 <body>
     
     <div class="container">
-        <h2>LISTA DE TAREAS</h2>
+        <h2 class="blue">LISTA DE TAREAS</h2>
         <section class="registro">
             <input type="text" id="nuevaTarea" placeholder="Escribe una tarea">
             <button id="agregarTarea">Agregar</button>
+            <button id="m-o">Mostrar/Ocultar Completados</button>
         </section>
 
-        <ul id="lista-tareas"></ul>
+        <section class="lista">
+            <h3></h3>
+            <ul id="lista-tareas">
+            </ul>
+        </section>
     </div>
 
     <script src="script.js"></script>
