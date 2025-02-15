@@ -65,7 +65,7 @@ li {
     border-radius: 10px;
 }
 
-.completada {
+.completado {
     text-decoration: line-through;
     background-color: rgb(98, 238, 122);
 }

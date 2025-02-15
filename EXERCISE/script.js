@@ -1,15 +1,9 @@
-
-
 $(function() {
-
-    const version = $().jquery;
-    alert(version);
 
     $("#nuevaTarea").data("placeholder", $("#nuevaTarea").attr("placeholder"))
     $("#nuevaTarea").focus(function() {
         $(this).attr("placeholder", ""); // Elimina el placeholder al hacer clic
-    })
-    $("#nuevaTarea").blur(function() {
+    }).blur(function() {
         $(this).attr("placeholder", $("#nuevaTarea").data("placeholder")); // Regresa el str del input al su estado original
     })
 
@@ -24,16 +18,15 @@ $(function() {
                 <button class="eliminar">❌</button>
             </li>`);
             $("#nuevaTarea").val(""); // Limpiar campo de entrada
-        }
-    }
+        };
+    };
+
 
     // Agregar tarea
     $("#agregarTarea").click(agregarTarea);
-
     // Agregar tarea con tecla Enter
     $("#nuevaTarea").keypress(function(event) {
         if (event.which === 13) { // Código 13 = Enter
-            agregarTarea();
         }
     });
 
@@ -49,7 +42,6 @@ $(function() {
         }
     });
     
-    // Esta función debe estar fuera de la función de eliminar
     $("#m-o").click(function() {
         $(".completada").toggle();
     });
