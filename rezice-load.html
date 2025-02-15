@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con load y resize</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .caja {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition: 0.3s;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Redimensiona la ventana</h2>
+<div class="caja"></div>
+
+<script>
+    // Evento load (cuando la página ha cargado completamente)
+    $(window).on("load", function() {
+        console.log("✅ Página cargada completamente");
+        alert("Bienvenido! La página ha terminado de cargar.");
+    });
+
+    // Evento resize (cuando se redimensiona la ventana)
+    $(window).on("resize", function() {
+        let anchoVentana = $(window).width(); // Obtiene el ancho de la ventana
+        $(".caja").css("width", anchoVentana / 4 + "px"); // Ajusta el ancho de la caja
+    });
+</script>
+
+</body>
+</html>

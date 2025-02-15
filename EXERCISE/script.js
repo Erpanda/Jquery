@@ -1,4 +1,10 @@
-$(document).ready(function() {
+
+
+$(function() {
+
+    const version = $().jquery;
+    alert(version);
+
     $("#nuevaTarea").data("placeholder", $("#nuevaTarea").attr("placeholder"))
     $("#nuevaTarea").focus(function() {
         $(this).attr("placeholder", ""); // Elimina el placeholder al hacer clic
@@ -9,9 +15,9 @@ $(document).ready(function() {
 
     // funciond de agregado de lista
     function agregarTarea() {
-        $("h3").text("TAREAS:")
         let tarea = $("#nuevaTarea").val().trim();
         if (tarea !== "") {
+            $("h3").text("TAREAS:")
             $("#lista-tareas").append(`<li>
                 ${tarea} 
                 <button class="completar">✔</button>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Scroll con jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            height: 2000px; /* Para generar scroll */
+            font-family: Arial, sans-serif;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: blue;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            transition: background 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<header id="encabezado">Encabezado fijo</header>
+
+<script>
+    $(window).on("scroll", function() {
+        if ($(window).scrollTop() > 1000) {
+            $("#encabezado").css("background-color", "red");
+        } else {
+            $("#encabezado").css("background-color", "blue");
+        }
+    });
+</script>
+
+</body>
+</html>

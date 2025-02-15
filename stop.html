@@ -1,0 +1,29 @@
+<button id="mover">Mover</button>
+<button id="detener">Detener</button>
+<div id="caja"></div>
+
+<style>
+  #caja {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    position: relative;
+  }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    
+  $("#mover").click(function() {
+    $("#caja").animate({ left: "300px" }, 2000);
+  });
+
+  $("#detener").click(function() {
+    $("#caja").stop(false, true); // Detiene y salta al final de la animación
+  });
+
+  $("#detener").click(function() {
+    $("#caja").stop(true); // true es lo mismo que el stop solo
+  });
+
+</script>
